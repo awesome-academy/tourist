@@ -21,13 +21,16 @@ jQuery(document).ready(function($) {
         },
         templates: {
             empty: [
-                '<div class="header-title">{{ __('Name') }}</div><div class="list-group search-results-dropdown"><div class="list-group-item">{{ __('Nothing found') }}</div></div>'
+                '<div class="header-title">{{ __('
+                Name ') }}</div><div class="list-group search-results-dropdown"><div class="list-group-item">{{ __('
+                Nothing found ') }}</div></div>'
             ],
             header: [
-                '<div class="header-title">{{ __('Name') }}</div><div class="list-group search-results-dropdown"></div>'
+                '<div class="header-title">{{ __('
+                Name ') }}</div><div class="list-group search-results-dropdown"></div>'
             ],
             suggestion: function(data) {
-            
+
                 return '<a href="/tourist/chi-tiet-tour/' + data.slug + '.html" class="list-group-item">' + data.name + '</a>';
             }
 

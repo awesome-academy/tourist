@@ -30,4 +30,26 @@ class ReviewRepository extends EloquentRepository
             return $data;
         }
     }
+
+    public function totalComment($id)
+    {
+        $data = Review::with('tour', 'user')->where('tour_id', $id)->count();
+        if (empty($data)) {
+            return false;
+        } else {
+            return $data;
+        }
+    }
+
+    public function rateStar($id)
+    {
+        $data_rate = Review::with('tour', 'user')->where('tour_id', $id)->sum('star');
+        $rate = $data_rate/5;
+
+        if (empty($rate)) {
+            return false;
+        } else {
+            return $rate;
+        }
+    }
 }

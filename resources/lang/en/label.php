@@ -179,6 +179,11 @@ return [
         'detail' => 'Detail tour',
         'price_tour' => 'Price tour',
         'latest_news' => 'Latest news',
+        'star_rate' => 'Star rate',
+        'name' => 'Fullname (*)',
+        'comment' => 'Comment',
+        'save_review' => 'Save Review',
+        'customer_review' => 'Customer reviews',
     ],
     'booktour' => [
         'service' => '1. Choose service',

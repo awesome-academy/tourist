@@ -176,6 +176,11 @@ return [
         'reason2' => 'Thanh toán an toàn và linh hoạt',
         'reason3' => 'Đặt tour dễ dàng và nhanh chóng',
         'reason4' => 'Luôn có mức giá tốt nhất',
+        'star_rate' => 'Đánh giá',
+        'name' => 'Họ và tên (*)',
+        'comment' => 'Nội dung bình luận',
+        'save_review' => 'Lưu bình luận',
+        'customer_review' => 'Đánh giá của khách hàng',
     ],
     'booktour' => [
         'service' => '1.chọn dịch vụ',

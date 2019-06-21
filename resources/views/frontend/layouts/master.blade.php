@@ -29,5 +29,4 @@
     <script type="text/javascript" src="{{ asset('assets/js/tour.js') }}"></script>
     @stack('scripts')
 </body>
-
 </html>

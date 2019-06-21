@@ -36,6 +36,7 @@ Route::namespace('Frontend')->group(function(){
     Route::get('book-tour/{slug}', 'OrderTourController@index')->name('book');
     Route::post('book-tour/{slug}', 'OrderTourController@store')->name('book.store');
     Route::get('find', 'SearchController@find');
+    Route::middleware('auth')->post('comment/{id}', 'RateStarController@index')->name('comment');
 });
 
 Auth::routes();

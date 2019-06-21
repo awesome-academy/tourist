@@ -6,16 +6,19 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\TourRepository;
 use App\Repositories\CategoryRepository;
+use App\Repositories\ReviewRepository;
 
 class TourViewController extends Controller
 {
     protected $tour;
     protected $catetour;
+    protected $review;
 
-    public function __construct(TourRepository $tour, CategoryRepository $catetour)
+    public function __construct(TourRepository $tour, CategoryRepository $catetour, ReviewRepository $review)
     {
         $this->tour = $tour;
         $this->catetour = $catetour;
+        $this->review = $review;
     }
 
     public function index($slug)
@@ -30,7 +33,10 @@ class TourViewController extends Controller
     public function detailTour($slug)
     {
         $data = $this->tour->tourDetail($slug);
+        $id = $data[0]->id;
+        $total_comment = $this->review->totalComment($id);
+        $rate = $this->review->rateStar($id);
 
-        return view('frontend.tour.detail', compact('data'));
+        return view('frontend.tour.detail', compact('data', 'total_comment', 'rate'));
     }
 }

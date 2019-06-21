@@ -3,5 +3,6 @@
     "/assets/js/index.js": "/assets/js/index.js",
     "/assets/js/menu.js": "/assets/js/menu.js",
     "/assets/js/frontend.js": "/assets/js/frontend.js",
-    "/assets/js/tour.js": "/assets/js/tour.js"
+    "/assets/js/tour.js": "/assets/js/tour.js",
+    "/assets/js/review.js": "/assets/js/review.js"
 }
